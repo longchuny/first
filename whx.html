@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            color: #333;
+            font: 12px/20px "SimSun","宋体","Arial Narrow",HELVETICA;
+        }
+        .top-nav-fix{
+            position: fixed;
+            top: 0;
+            position: absolute;
+            top: expression(eval(document.documentElement.scrollTop));
+            left: 0
+        }
+        .top-nav-wrap{
+            width: 100%;
+            min-width: 1000px;
+            z-index: 9999;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .top-nav{
+            height: 41px;
+            border-top: 3px solid #ff8500;
+            border-bottom: 1px solid #edeef0;
+            background-color: #fcfcfc;
+            text-decoration: none;
+        }
+        .top-nav .tn-bg{
+            height: 41px;
+        }
+        .top-nav .tn-header{
+            width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            font-family: "Microsoft YaHei","微软雅黑","SimSun","宋体";
+        }
+        .top-nav .tn-nav{
+            float: left;
+            _display: inline;
+        }
+        .top-nav .tn-title{
+            float: left;
+            font-size: 12px;
+            position: relative;
+            color: #4c4c4c;
+            line-height: 16px;
+            cursor: pointer;
+            border-width: 0 1px;
+            display: inline-block;
+            z-index: 9999;
+            padding: 0 2px 0 0;
+        }
+        .top-nav .tn-title i{
+            display: inline-block;
+            height: 17px;
+            padding: 12px 9px 12px 16px;
+            vertical-align: bottom;
+            _overflow: hidden;
+        }
+        .top-nav i{
+            font-style: normal;
+            font-weight: normal;
+        }
+  .top-nav .tn-arrow{
+      display: inline-block;
+      width: 8px;
+      height: 5px;
+      margin: 0 0 0 5px;
+      overflow: hidden;
+      vertical-align: middle;
+      font-size: 12px;
+      line-height: 13px;
+      -webkit-transform: none;
+      -moz-transform: none;
+      -o-transform: none;
+      background: url(//i0.sinaimg.cn/home/main/index2013/0403/icon.png) 0 -977px no-repeat;
+  }
+        .tn-close{
+            float: right;
+            height: 21px;
+            margin: 8px 0 0 3px;
+            line-height: 21px;
+            _line-height: 22px;
+            width: 54px;
+            height: 21px;
+            overflow: hidden;
+            border: 1px solid #e2e2e2;
+            font-size: 12px;
+            color: #a7a5a0;
+            text-decoration: none;
+        }
+        .tn-close i{
+            float: left;
+            display: inline;
+            width: 17px;
+            height: 17px;
+            margin: 2px 5px 0 2px;
+            _margin-right: 3px;
+            overflow: hidden;
+            background: url(//i0.sinaimg.cn/home/main/index2013/0403/icon.png) 3px -994px no-repeat #bebcbc;
+            _zoom: 1;
+        }
+        .tn-person-r{
+            float: right;
+        }
+        .tn-person-r .tn-title{
+            float: left;
+            font-size: 12px;
+            position: relative;
+            border: 1px solid #FCFCFC;
+            color: #4C4C4C;
+            display: inline-block;
+            line-height: 16px;
+            cursor: pointer;
+            z-index: 9999;
+            padding: 0 2px 0 0;
+            text-decoration: none;
+        }
+        .tn-person-r .tn-title i{
+            display: inline-block;
+            height: 17px;
+            padding: 12px 15px 12px 18px;
+            vertical-align: bottom;
+            _overflow: hidden;
+            font-style: normal;
+            position: relative;
+            max-width: 79px;
+            _width: 79px;
+            line-height: 28px;
+            color: #FF8400;
+        }
+        .tn-person-r .tn-title .tn-arrow{
+            position: absolute;
+            right: 15px;
+            top: 17px;
+        }
+        .tn-person-r .tn-arrow{
+            display: inline-block;
+            width: 8px;
+            height: 5px;
+            margin: 0 0 0 5px;
+            overflow: hidden;
+            vertical-align: middle;
+            font-size: 12px;
+            line-height: 13px;
+            -webkit-transform: none;
+            -moz-transform: none;
+            -o-transform: none;
+            background: url(//i0.sinaimg.cn/home/main/index2013/0403/icon.png) 0 -977px no-repeat;
+        }
+        .top-nav .tn-arrow{
+            display: inline-block;
+            width: 8px;
+            height: 5px;
+            margin: 0 0 0 5px;
+            overflow: hidden;
+            vertical-align: middle;
+            font-size: 12px;
+            line-height: 13px;
+            -webkit-transform: none;
+            -moz-transform: none;
+            -o-transform: none;
+            background: url(//i0.sinaimg.cn/home/main/index2013/0403/icon.png) 0 -977px no-repeat;
+        }
+        .tn-person-r .tn-new{
+            margin-top: -10px;
+            position: absolute;
+            background: url(//i0.sinaimg.cn/home/main/index2013/0403/icon.png) 0 -1017px;
+            width: 14px;
+            height: 11px;
+        }
+        .top-nav .tn-new{
+            background: url(//i0.sinaimg.cn/home/main/index2013/0403/icon.png) 0 -1017px;
+            width: 14px;
+            height: 11px;
+            position: absolute;
+            display: none;
+        }
+     .tn-person-r .tn-title i{
+         font-style: normal;
+         ont-weight: normal;
+     }
+    </style>
+</head>
+<body>
+<div class="top-nav-wrap top-nav-fix" >
+    <div class="top-nav">
+        <div class="tn-bg">
+            <div class="tn-header">
+                <div class="tn-nav">
+                    <div class="tn-title">
+                        <i>设为首页</i>
+                    </div>
+                    <div class="tn-title">
+                        <i>手机新浪网</i>
+                    </div>
+                    <div class="tn-title">
+                        <i>移动客户端<span class="tn-arrow"></span> </i>
+                    </div>
+                </div>
+                <div class="tn-close">
+                    <span><i></i>关闭</span>
+                </div>
+                <div class="tn-person-r" style="float: right">
+                    <div class="login"><i>登录</i></div>
+                    <div class="wb"><i>微博</i><em class="tn-new" style="display: none"></em> <span class="tn-narrow"></span> </div>
+                    <div class="blog><i>博客</i> <span class="tn-narrow"></span> </div>
+                    <div class="mail"><i>邮箱</i><span class="tn-narrow"></span> </div>
+                    <div class="tn-title"><i>网址导航</i> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
